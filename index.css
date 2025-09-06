@@ -1,4 +1,4 @@
-  body {
+body {
       scroll-behavior: smooth;
       transition: background 0.5s, color 0.5s;
       background: var(--bg);
@@ -25,7 +25,8 @@
       color: #f8f9fa !important;
       box-shadow: 0 2px 8px rgba(0,0,0,0.18);
     }
-    .dark-mode .navbar .nav-link, .dark-mode .navbar-brand {
+    .dark-mode .navbar .nav-link,
+    .dark-mode .navbar-brand {
       color: #f8f9fa !important;
     }
     .dark-mode .hero {
@@ -176,4 +177,53 @@
     a.btn:hover, .btn:hover {
       box-shadow: 0 2px 8px rgba(0,0,0,0.12);
       transform: scale(1.05);
+    }
+    @media (max-width: 991px) {
+      .navbar .nav-link, .navbar-brand {
+        font-size: 1.1rem !important;
+      }
+      .hero {
+        padding: 2rem 1rem;
+      }
+      .skills .row > div, .softskills .row > div {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 1.5rem;
+      }
+      .card {
+        margin-bottom: 2rem;
+      }
+      section {
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+    }
+    @media (max-width: 575px) {
+      .hero img {
+        width: 100px;
+        height: 100px;
+      }
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+      .skills .row > div, .softskills .row > div {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+      }
+      .card {
+        margin-bottom: 1.5rem;
+      }
+      section {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      .footer {
+        font-size: 0.9rem;
+        padding: 1rem 0 0.5rem 0;
+      }
     }
