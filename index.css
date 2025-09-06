@@ -1,0 +1,179 @@
+  body {
+      scroll-behavior: smooth;
+      transition: background 0.5s, color 0.5s;
+      background: var(--bg);
+      color: var(--text);
+    }
+    :root {
+      --bg: #f8f9fa;
+      --text: #212529;
+      --card-bg: #fff;
+      --card-text: #212529;
+      --primary: #0d6efd;
+      --accent: #6610f2;
+    }
+    .dark-mode {
+      --bg: #181a1b;
+      --text: #f8f9fa;
+      --card-bg: #23272b;
+      --card-text: #f8f9fa;
+      --primary: #0d6efd;
+      --accent: #b983ff;
+    }
+    .dark-mode .navbar {
+      background: #23272b !important;
+      color: #f8f9fa !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .dark-mode .navbar .nav-link, .dark-mode .navbar-brand {
+      color: #f8f9fa !important;
+    }
+    .dark-mode .hero {
+      background: linear-gradient(135deg, #23272b 60%, #181a1b 100%) !important;
+      color: #f8f9fa !important;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.28);
+    }
+    .dark-mode .card {
+      background: #23272b !important;
+      color: #f8f9fa !important;
+      border: 1px solid #343a40;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+    }
+    .dark-mode .card-title {
+      color: #b983ff !important;
+    }
+    .dark-mode .btn-outline-light {
+      color: #f8f9fa;
+      border-color: #b983ff;
+    }
+    .dark-mode .btn-outline-light:hover {
+      background: #b983ff;
+      color: #23272b;
+    }
+    .dark-mode .skills i {
+      color: #b983ff !important;
+    }
+    .dark-mode .skills i:hover {
+      color: #f8f9fa !important;
+    }
+    .dark-mode .footer {
+      background: #23272b !important;
+      color: #b983ff !important;
+      border-top: 1px solid #343a40;
+    }
+    .dark-mode a {
+      color: #b983ff;
+    }
+    .dark-mode a:hover {
+      color: #f8f9fa;
+    }
+    .hero {
+      text-align: center;
+      transition: box-shadow 0.5s, transform 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      animation: heroFadeIn 1.2s ease-in;
+    }
+    @keyframes heroFadeIn {
+      0% { opacity: 0; transform: translateY(-40px) scale(0.95); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .skills i {
+      font-size: 3rem;
+      transition: transform 0.3s cubic-bezier(.68,-0.55,.27,1.55), color 0.5s;
+    }
+    .skills i:hover {
+      transform: scale(1.2) rotate(-5deg);
+      color: var(--accent);
+    }
+    .card {
+      transition: box-shadow 0.4s, transform 0.4s;
+    }
+    .card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+      transform: translateY(-8px) scale(1.03);
+    }
+    .contact-card {
+      max-width: 500px;
+      background: var(--card-bg);
+      color: var(--card-text);
+      transition: background 0.5s, color 0.5s, box-shadow 0.5s;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      animation: fadeInUp 1.2s 0.3s backwards;
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    section {
+      margin-bottom: 6rem;
+      margin-top: 6rem;
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+      transition: margin 0.5s, padding 0.5s, background 0.5s, color 0.5s;
+    }
+    section:not(:first-child) {
+      border-radius: 1rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      background: rgba(248,249,250,0.7);
+      animation: sectionFadeIn 1.2s;
+    }
+    .dark-mode section:not(:first-child) {
+      background: rgba(35,39,43,0.7);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    }
+    @keyframes sectionFadeIn {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    section h2 {
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      letter-spacing: 1px;
+      transition: color 0.5s;
+      animation: fadeInTitle 1s 0.2s backwards;
+    }
+    @keyframes fadeInTitle {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .footer {
+      background: var(--card-bg);
+      color: var(--card-text);
+      text-align: center;
+      padding: 1.5rem 0 1rem 0;
+      margin-top: 3rem;
+      border-top: 1px solid #dee2e6;
+      font-size: 1rem;
+      transition: background 0.5s, color 0.5s;
+      animation: fadeInFooter 1.2s 0.5s backwards;
+    }
+    @keyframes fadeInFooter {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .mode-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 999;
+      transition: background 0.3s, color 0.3s;
+      animation: fadeInToggle 1s 0.1s backwards;
+    }
+    @keyframes fadeInToggle {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    a.btn, .btn {
+      transition: box-shadow 0.3s, background 0.3s, color 0.3s, transform 0.3s;
+    }
+    a.btn:hover, .btn:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      transform: scale(1.05);
+    }
