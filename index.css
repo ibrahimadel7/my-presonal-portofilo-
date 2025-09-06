@@ -179,6 +179,15 @@ body {
       transform: scale(1.05);
     }
     @media (max-width: 991px) {
+      .mode-toggle {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        z-index: 1050;
+      }
+      .navbar {
+        margin-top: 2.5rem;
+      }
       .navbar .nav-link, .navbar-brand {
         font-size: 1.1rem !important;
       }
@@ -221,6 +230,15 @@ body {
       }
     }
     @media (max-width: 575px) {
+      .mode-toggle {
+        position: absolute;
+        top: 0.3rem;
+        right: 0.3rem;
+        z-index: 1050;
+      }
+      .navbar {
+        margin-top: 2.5rem;
+      }
       .navbar .ms-auto {
         flex-direction: row;
         flex-wrap: wrap;
