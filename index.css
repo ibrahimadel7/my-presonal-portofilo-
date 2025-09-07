@@ -178,6 +178,49 @@ body {
       box-shadow: 0 2px 8px rgba(0,0,0,0.12);
       transform: scale(1.05);
     }
+    .skills .row > div {
+      flex: 1 1 0;
+      max-width: 12.5%;
+      min-width: 120px;
+      margin-bottom: 1.5rem;
+      margin-right: 1rem;
+      margin-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: var(--card-bg);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .dark-mode .skills .row > div {
+      background: #23272b;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    }
+    @media (max-width: 991px) {
+      .skills .row > div {
+        max-width: 33.333%;
+        min-width: 120px;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+      }
+    }
+    @media (max-width: 575px) {
+      .skills .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+      .skills .row > div {
+        flex: 1 1 40%;
+        max-width: 45%;
+        min-width: 120px;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+      }
+    }
     @media (max-width: 991px) {
       .mode-toggle {
         position: absolute;
