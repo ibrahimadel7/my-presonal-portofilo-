@@ -395,12 +395,13 @@
     const modeIcon = document.getElementById('modeIcon');
     const body = document.body;
 
-    // Load saved mode from localStorage
-    const savedTheme = localStorage.getItem('theme');
+    // Load saved mode from localStorage (default to dark mode)
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     if (savedTheme === 'dark') {
       body.classList.add('dark-mode');
       modeIcon.classList.remove('bi-moon-stars-fill');
       modeIcon.classList.add('bi-brightness-high-fill');
+      localStorage.setItem('theme', 'dark');
     }
 
     // Toggle dark mode on button click
